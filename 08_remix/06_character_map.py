@@ -13,3 +13,6 @@ for i in range(0,6):
             print(str(u)+' ', end=' ')
     print()
     x += 16
+
+    #%%
+    print("Hello")
