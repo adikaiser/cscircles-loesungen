@@ -1,24 +1,9 @@
 def postalValidate(S):
-    X = chr(32)
-    S = S.replace(X, '')
+    S = S.replace(chr(32), '')
     if len(S) != 6:
         return False
-    for i in S:
-        for n in S:
-            if S.isalpha() or S.isdigit():
-                return False
-            elif S[0].isdigit():
-                return False
-            elif S[2].isdigit():
-                return False
-            elif S[4].isdigit():
-                return False
-            elif S[1].isalpha():
-                return False
-            elif S[3].isalpha():
-                return False
-            elif S[5].isdigit() == False:
-                return False            
-            else:
-                 break
-        return S.upper()
+    if not S[0].isalpha() or not S[2].isalpha() or not S[4].isalpha():
+        return False
+    if not S[1].isdigit() or not S[3].isdigit() or not S[5].isdigit():
+        return False
+    return S.upper()
