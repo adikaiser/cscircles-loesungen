@@ -11,4 +11,3 @@ def replace(list, X, Y):
                 break
             else:
                 j += 1
-                continue
