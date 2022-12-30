@@ -1,6 +1,6 @@
 def shiftLetter(letter, shiftValue):
     if letter==" ":
-        return(letter)
+        return letter
     shiftedLetter = chr(ord(letter)+shiftValue)
     if ord(shiftedLetter)>ord("Z"):
         shiftedLetter = chr(ord(shiftedLetter)-26)
@@ -15,7 +15,7 @@ def shift(string, shiftValue):
 def getGoodness(string):
     currentStringGoodness = 0
     for letter in string:
-        if not letter==" ":
+        if letter!=" ":
             currentStringGoodness += letterGoodness[ord(letter)-ord("A")]
     return currentStringGoodness
 
